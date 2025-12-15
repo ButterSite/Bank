@@ -1,0 +1,65 @@
+.errors-page-bg {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f7f7fa;
+}
+
+.errors-page-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  padding: 40px 32px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.errors-page-icon {
+  margin-bottom: 18px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.errors-page-title {
+  color: #e53935;
+  font-size: 28px;
+  margin: 0 0 10px;
+}
+
+.errors-page-message {
+  color: #444;
+  font-size: 16px;
+  margin: 0 0 12px;
+}
+
+.errors-page-code {
+  color: #888;
+  font-size: 14px;
+  margin: 0;
+}
+
+.errors-page-code span {
+  color: #e53935;
+  font-weight: 500;
+}
+
+.btn-go-back {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #667eea;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-go-back:hover {
+  background-color: #556cd6;
+  transform: scale(1.05);
+}

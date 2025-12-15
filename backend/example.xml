@@ -1,0 +1,46 @@
+`<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.02">
+  <FIToFICustomerCreditTransfer>
+  
+    <GrpHdr>
+      <MsgId>TX-1743090884316-XUS1GYO55</MsgId>
+      <CreDtTm>2025-03-27T15:54:44.316Z</CreDtTm>
+      <NbOfTxs>1</NbOfTxs>
+      <InitgPty>
+        <Nm>Jan Kowalski</Nm>
+      </InitgPty>
+    </GrpHdr>
+
+    <PmtInf>
+      <PmtInfId>TX-1743090884316-XUS1GYO55-PMT</PmtInfId>
+      <PmtMtd>TRF</PmtMtd>
+      <Dbtr>
+        <Nm>Jan Kowalski</Nm>
+        <Acct>
+          <Id>
+            <IBAN>PL05121212120000000000000001</IBAN>
+          </Id>
+        </Acct>
+      </Dbtr>
+      <CdtTrfTxInf>
+        <PmtId>
+          <TxId>TX-1743090884316-XUS1GYO55</TxId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="PLN">100.50</InstdAmt>
+        </Amt>
+        <Cdtr>
+          <Nm>Adam Nowak</Nm>
+          <Acct>
+            <Id>
+              <IBAN>PL05121212120000000000000001</IBAN>
+            </Id>
+          </Acct>
+        </Cdtr>
+        <RmtInf>
+          <Ustrd>Za piwo</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+    </PmtInf>
+  </FIToFICustomerCreditTransfer>
+</Document>`;

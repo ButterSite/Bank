@@ -1,0 +1,75 @@
+.filter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+}
+
+.admin-table thead {
+  background: #667eea;
+  color: white;
+}
+
+.admin-table th {
+  padding: 15px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.admin-table td {
+  padding: 15px;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 14px;
+}
+
+.admin-table .iban-cell {
+  font-family: monospace;
+  font-size: 12px;
+  color: #666;
+  min-width: 250px;
+  word-break: break-all;
+  white-space: normal;
+}
+
+.admin-table tbody tr:hover {
+  background: #f8f9fa;
+}
+
+.action-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.action-deposit {
+  background: #d4edda;
+  color: #155724;
+}
+
+.action-withdrawal {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.action-transfer {
+  background: #d1ecf1;
+  color: #0c5460;
+}
+
+.amount-cell.positive {
+  color: #28a745;
+}
+
+.amount-cell.negative {
+  color: #dc3545;
+}
