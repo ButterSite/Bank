@@ -14,7 +14,7 @@ const accountSchema = new mongoose.Schema({
     required: true,
     unique: true,
     default: function () {
-      const countryCode = process.env.IBAN_COUNTRY_CODE || 'DE';
+      const countryCode = process.env.IBAN_COUNTRY_CODE || 'PL';
       const bankCode = process.env.IBAN_BANK_CODE || '10100000';
       const accountSeq = this._accountSeq || Math.floor(Math.random() * 1000000) + 1;
       const accountLength = parseInt(process.env.IBAN_ACCOUNT_LENGTH) || 16;
