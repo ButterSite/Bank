@@ -7,7 +7,7 @@ RESTful API backend for a banking application built with Node.js, Express, and M
 - User management - registration, login, JWT-based authentication
 - Account management - creating and managing bank accounts
 - Transactions - fund transfers, transaction history
-- Admin panel - system management via AdminJS
+- Admin panel - custom admin routes with role-based access control
 - Account logs - tracking all account operations
 - IBAN generation - automatic account number creation
 - XML export - transaction export to XML format
@@ -44,10 +44,6 @@ MONGODB_URI=mongodb://localhost:27017/bank
 # JWT
 JWT_SECRET=your-secret-key-here
 JWT_EXPIRES_IN=24h
-
-# Admin Panel
-ADMIN_EMAIL=admin@bank.com
-ADMIN_PASSWORD=admin123
 
 # Other
 NODE_ENV=development
@@ -117,7 +113,7 @@ backend/
 │   │   ├── swagger.js
 │   │   └── swagger.yaml
 │   └── adminControllers/     # Admin panel controllers
-├── bank/                     # AdminJS TypeScript setup
+├── bank/                     # Additional banking utilities (TypeScript)
 │   └── src/
 │       ├── app.ts
 │       └── admin/
@@ -147,7 +143,9 @@ backend/
 - `GET /api/history` - Get account operation logs
 
 ### Admin Panel
-- `/admin` - Administrative panel (requires admin privileges)
+- `/admin/login` - Admin login
+- `/admin/create` - Create admin user
+- `/admin/logs` - Get system logs (requires admin role)
 
 For complete endpoint documentation with request/response schemas, see the Swagger UI at `/api-docs`.
 
@@ -172,7 +170,6 @@ npm test
 - **MongoDB & Mongoose** - Database and ODM
 - **JWT** - Authentication
 - **bcrypt** - Password hashing
-- **AdminJS** - Admin panel
 - **Swagger/OpenAPI** - API documentation
 - **Winston** - Logging
 - **Joi** - Data validation

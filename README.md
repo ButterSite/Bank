@@ -9,7 +9,7 @@ This application provides a complete banking solution with:
 - Multiple account management
 - Secure fund transfers between accounts
 - Transaction history and account logs
-- Administrative panel for system management
+- Administrative endpoints with role-based access control
 - Interactive API documentation with Swagger
 - Responsive web interface
 
@@ -45,7 +45,6 @@ Bank/
 - **Node.js** with Express.js
 - **MongoDB** with Mongoose ODM
 - **JWT** authentication
-- **AdminJS** for admin panel
 - **Swagger/OpenAPI** for API documentation
 - **Winston** for logging
 - **Joi** for validation
@@ -85,8 +84,6 @@ PORT=3000
 MONGODB_URI=mongodb://localhost:27017/bank
 JWT_SECRET=your-secret-key-here
 JWT_EXPIRES_IN=24h
-ADMIN_EMAIL=admin@bank.com
-ADMIN_PASSWORD=admin123
 NODE_ENV=development
 ```
 
@@ -144,12 +141,11 @@ The Swagger documentation provides:
 - Account balance tracking
 
 ### Admin Features
-- Administrative dashboard
-- User management
+- Administrative dashboard (frontend)
+- Role-based access control
 - System-wide transaction monitoring
-- Account creation and management
-- Audit logs
-- Admin user creation
+- Account logs and audit trails
+- Admin user management
 
 ### Security
 - Password hashing with bcrypt
@@ -196,7 +192,9 @@ npm run build  # Production build
 - `GET /api/transactions/:id` - Transaction details
 
 ### Admin
-- `/admin` - Admin panel (AdminJS)
+- `POST /admin/login` - Admin login
+- `POST /admin/create` - Create admin user
+- `GET /admin/logs` - System logs (requires admin role)
 - `GET /api/history` - Account operation logs
 
 For complete documentation, see the Swagger UI.
